@@ -12,10 +12,20 @@ class SwaggerUIComponent extends React.Component {
     }
 
     initializeSwaggerUIBundle() {
+        // const location = { window };
         SwaggerUIBundle({
             spec: swaggerJson,
             dom_id: '#apim-swagger-ui',
-            oauth2RedirectUrl: 'http://localhost:8080/oauth2-redirect.html'
+            oauth2RedirectUrl: `http://${window.location.hostname}:${window.location.port}/oauth2-redirect.html`,
+            validatorUrl: null,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+            ],
+            plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+            ],
+            layout: 'StandaloneLayout'
         });
     }
 

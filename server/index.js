@@ -11,7 +11,7 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.use('/', express.static(path.join(__dirname, 'dist')));
+app.use('/', express.static(path.join(__dirname, 'docs')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // Additional middleware which will set headers that we need on each request.
