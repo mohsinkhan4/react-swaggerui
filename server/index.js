@@ -26,7 +26,7 @@ app.use(function(req, res, next) {
 });
 
 // Redirect to physical file location
-app.get('/oauth2-redirect.html', function(req, res) {
+app.get('/react-swaggerui/oauth2-redirect.html', function(req, res) {
   res.sendFile(
     path.join(__dirname, '/../node_modules/swagger-ui-dist/oauth2-redirect.html')
   );

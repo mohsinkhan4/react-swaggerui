@@ -16,7 +16,7 @@ class SwaggerUIComponent extends React.Component {
         SwaggerUIBundle({
             spec: swaggerJson,
             dom_id: '#apim-swagger-ui',
-            // oauth2RedirectUrl: `http://${window.location.hostname}:${window.location.port}/oauth2-redirect.html`,
+            oauth2RedirectUrl: `http://${window.location.hostname}:${window.location.port}/react-swaggerui/oauth2-redirect.html`,
             validatorUrl: null,
             presets: [
                 SwaggerUIBundle.presets.apis,
